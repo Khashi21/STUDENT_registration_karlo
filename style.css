@@ -1,0 +1,30 @@
+
+#about{
+    background-color: beige;
+}
+#nav{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+}
+#education{
+    background-color: beige;
+}
+#projects{
+    background-color: beige;
+}
+
+#contact{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    background:beige;
+}
+#btn{
+    border-radius: 10px;
+
+}
