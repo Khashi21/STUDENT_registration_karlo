@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration, Admission & Scholarship Form</title>
+</head>
+
+<body>
+
+<h1>Student Registration, Admission & Scholarship Form</h1>
+
+<form action="#" method="post" enctype="multipart/form-data" autocomplete="on">
+
+    <fieldset>
+        <legend>1. Personal Information</legend>
+
+        <p>
+            <label for="fullName">Full Name:</label><br>
+            <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                required
+                minlength="3"
+                maxlength="50"
+                placeholder="Enter your full name"
+                autocomplete="name">
+        </p>
+
+        <p>
+            <label for="parentName">Father's / Mother's Name:</label><br>
+            <input
+                type="text"
+                id="parentName"
+                name="parentName"
+                required
+                minlength="3"
+                maxlength="50"
+                placeholder="Enter parent's name">
+        </p>
+
+        <p>
+            <label for="email">Email:</label><br>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="example@email.com"
+                autocomplete="email">
+        </p>
+
+        <p>
+            <label for="mobile">Mobile Number:</label><br>
+            <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                required
+                pattern="[0-9]{10}"
+                maxlength="10"
+                placeholder="10-digit mobile number"
+                autocomplete="tel">
+        </p>
+
+        <p>
+            <label for="dob">Date of Birth:</label><br>
+            <!-- Maximum date is set to 17 years before 21-Aug-2026 -->
+            <input
+                type="date"
+                id="dob"
+                name="dob"
+                required
+                max="2009-08-21">
+        </p>
+
+        <fieldset>
+            <legend>Gender</legend>
+
+            <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="Male"
+                required>
+            <label for="male">Male</label>
+
+            <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="Female">
+            <label for="female">Female</label>
+
+            <input
+                type="radio"
+                id="otherGender"
+                name="gender"
+                value="Other">
+            <label for="otherGender">Other</label>
+        </fieldset>
+
+        <p>
+            <label for="password">Password:</label><br>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                minlength="8"
+                maxlength="20"
+                placeholder="8–20 characters"
+                autocomplete="new-password">
+        </p>
+
+        <p>
+            <label for="photograph">Photograph:</label><br>
+            <input
+                type="file"
+                id="photograph"
+                name="photograph"
+                required
+                accept=".jpg,.jpeg,.png,image/jpeg,image/png">
+        </p>
+
+        <button type="button">Next</button>
+    </fieldset>
+
+
+    <br>
+
+
+
+    <fieldset>
+        <legend>2. Address Details</legend>
+
+        <p>
+            <label for="address">Complete Address:</label><br>
+            <textarea
+                id="address"
+                name="address"
+                required
+                minlength="20"
+                maxlength="200"
+                rows="5"
+                cols="50"
+                placeholder="Enter your complete residential address"></textarea>
+        </p>
+
+        <p>
+            <label for="city">City:</label><br>
+            <input
+                type="text"
+                id="city"
+                name="city"
+                required
+                minlength="2"
+                maxlength="30"
+                placeholder="Enter city">
+        </p>
+
+        <p>
+            <label for="state">State:</label><br>
+            <select id="state" name="state" required>
+                <option value="">-- Select State --</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="country">Country:</label><br>
+            <select id="country" name="country" required>
+                <option value="">-- Select Country --</option>
+                <option value="India">India</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="pin">PIN Code:</label><br>
+            <input
+                type="text"
+                id="pin"
+                name="pin"
+                required
+                pattern="[0-9]{6}"
+                maxlength="6"
+                placeholder="6-digit PIN code"
+                inputmode="numeric">
+        </p>
+
+        <button type="button">Back</button>
+        <button type="button">Next</button>
+    </fieldset>
+
+
+    <br>
+
+
+
+    <fieldset>
+        <legend>3. Academic Details</legend>
+
+        <p>
+            <label for="tenthPercentage">10th Percentage:</label><br>
+            <input
+                type="number"
+                id="tenthPercentage"
+                name="tenthPercentage"
+                required
+                min="0"
+                max="100"
+                step="0.01"
+                placeholder="0–100">
+        </p>
+
+        <p>
+            <label for="twelfthPercentage">12th Percentage:</label><br>
+            <input
+                type="number"
+                id="twelfthPercentage"
+                name="twelfthPercentage"
+                required
+                min="0"
+                max="100"
+                step="0.01"
+                placeholder="0–100">
+        </p>
+
+        <p>
+            <label for="graduationPercentage">Graduation Percentage:</label><br>
+            <input
+                type="number"
+                id="graduationPercentage"
+                name="graduationPercentage"
+                min="0"
+                max="100"
+                step="0.01"
+                placeholder="0–100">
+        </p>
+
+        <p>
+            <label for="passingYear">Passing Year:</label><br>
+            <input
+                type="text"
+                id="passingYear"
+                name="passingYear"
+                required
+                pattern="[0-9]{4}"
+                maxlength="4"
+                placeholder="YYYY"
+                inputmode="numeric">
+        </p>
+
+        <p>
+            <label for="highestQualification">Highest Qualification:</label><br>
+            <select
+                id="highestQualification"
+                name="highestQualification"
+                required>
+                <option value="">-- Select Qualification --</option>
+                <option value="10th">10th</option>
+                <option value="12th">12th</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Graduation">Graduation</option>
+                <option value="Post Graduation">Post Graduation</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="entranceExam">Entrance Exam:</label><br>
+            <select
+                id="entranceExam"
+                name="entranceExam"
+                required>
+                <option value="">-- Select Exam --</option>
+                <option value="JEE Main">JEE Main</option>
+                <option value="JEE Advanced">JEE Advanced</option>
+                <option value="NEET">NEET</option>
+                <option value="CUET">CUET</option>
+                <option value="CAT">CAT</option>
+                <option value="GATE">GATE</option>
+                <option value="University Entrance">University Entrance</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="entranceScore">Entrance Score:</label><br>
+            <input
+                type="number"
+                id="entranceScore"
+                name="entranceScore"
+                required
+                min="0"
+                max="200"
+                placeholder="0–200">
+        </p>
+
+        <button type="button">Back</button>
+        <button type="button">Next</button>
+    </fieldset>
+
+
+    <br>
+
+    <fieldset>
+        <legend>4. Course Details</legend>
+
+        <p>
+            <label for="course">Course:</label><br>
+            <select id="course" name="course" required>
+                <option value="">-- Select Course --</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="B.Sc">B.Sc</option>
+                <option value="M.Tech">M.Tech</option>
+                <option value="MCA">MCA</option>
+                <option value="MBA">MBA</option>
+                <option value="M.Sc">M.Sc</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="specialization">Specialization:</label><br>
+            <select
+                id="specialization"
+                name="specialization"
+                required>
+                <option value="">-- Select Specialization --</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Civil">Civil</option>
+                <option value="Business Administration">
+                    Business Administration
+                </option>
+            </select>
+        </p>
+
+        <fieldset>
+            <legend>Admission Type</legend>
+
+            <input
+                type="radio"
+                id="regular"
+                name="admissionType"
+                value="Regular"
+                required>
+            <label for="regular">Regular</label>
+
+            <input
+                type="radio"
+                id="lateral"
+                name="admissionType"
+                value="Lateral Entry">
+            <label for="lateral">Lateral Entry</label>
+
+            <input
+                type="radio"
+                id="management"
+                name="admissionType"
+                value="Management">
+            <label for="management">Management</label>
+        </fieldset>
+
+        <button type="button">Back</button>
+        <button type="button">Next</button>
+    </fieldset>
+
+
+    <br>
+
+
+    <fieldset>
+        <legend>5. Technical Skills</legend>
+
+        <p>Select at least one skill:</p>
+
+        <input type="checkbox" id="html" name="skills" value="HTML">
+        <label for="html">HTML</label><br>
+
+        <input type="checkbox" id="css" name="skills" value="CSS">
+        <label for="css">CSS</label><br>
+
+        <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+        <label for="javascript">JavaScript</label><br>
+
+        <input type="checkbox" id="java" name="skills" value="Java">
+        <label for="java">Java</label><br>
+
+        <input type="checkbox" id="python" name="skills" value="Python">
+        <label for="python">Python</label><br>
+
+        <input type="checkbox" id="cpp" name="skills" value="C++">
+        <label for="cpp">C++</label><br>
+
+        <input type="checkbox" id="sql" name="skills" value="SQL">
+        <label for="sql">SQL</label><br>
+
+        <input type="checkbox" id="react" name="skills" value="React">
+        <label for="react">React</label><br>
+
+        <input type="checkbox" id="angular" name="skills" value="Angular">
+        <label for="angular">Angular</label><br>
+
+        <input type="checkbox" id="nodejs" name="skills" value="Node.js">
+        <label for="nodejs">Node.js</label>
+
+        <p>
+            <label for="otherSkills">Other Skills (Optional):</label><br>
+            <input
+                type="text"
+                id="otherSkills"
+                name="otherSkills"
+                minlength="2"
+                maxlength="50"
+                placeholder="Enter other skills">
+        </p>
+
+        <button type="button">Back</button>
+        <button type="button">Next</button>
+    </fieldset>
+
+
+    <br>
+
+    <fieldset>
+        <legend>6. Scholarship Details</legend>
+
+        <fieldset>
+            <legend>Scholarship Category</legend>
+
+            <input
+                type="radio"
+                id="merit"
+                name="scholarshipCategory"
+                value="Merit"
+                required>
+            <label for="merit">Merit</label><br>
+
+            <input
+                type="radio"
+                id="sports"
+                name="scholarshipCategory"
+                value="Sports">
+            <label for="sports">Sports</label><br>
+
+            <input
+                type="radio"
+                id="research"
+                name="scholarshipCategory"
+                value="Research">
+            <label for="research">Research</label><br>
+
+            <input
+                type="radio"
+                id="financial"
+                name="scholarshipCategory"
+                value="Financial Assistance">
+            <label for="financial">Financial Assistance</label><br>
+
+            <input
+                type="radio"
+                id="noScholarship"
+                name="scholarshipCategory"
+                value="No Scholarship">
+            <label for="noScholarship">No Scholarship</label>
+        </fieldset>
+
+        <p>
+            <label for="scholarshipAmount">
+                Scholarship Amount (₹):
+            </label><br>
+            <input
+                type="number"
+                id="scholarshipAmount"
+                name="scholarshipAmount"
+                min="1000"
+                max="200000"
+                placeholder="1000–200000">
+        </p>
+
+        <p>
+            <label for="justification">Justification:</label><br>
+            <textarea
+                id="justification"
+                name="justification"
+                minlength="50"
+                maxlength="300"
+                rows="5"
+                cols="50"
+                placeholder="Explain why you are applying for the scholarship"></textarea>
+        </p>
+
+        <button type="button">Back</button>
+        <button type="button">Next</button>
+    </fieldset>
+
+
+    <br>
+
+    <fieldset>
+        <legend>7. Research Details</legend>
+
+        <p>
+            <label for="researchArea">Research Area:</label><br>
+            <input
+                type="text"
+                id="researchArea"
+                name="researchArea"
+                minlength="2"
+                maxlength="100"
+                placeholder="Enter research area">
+        </p>
+
+        <p>
+            <label for="researchTitle">Research Title:</label><br>
+            <input
+                type="text"
+                id="researchTitle"
+                name="researchTitle"
+                minlength="2"
+                maxlength="200"
+                placeholder="Enter research title">
+        </p>
+
+        <p>
+            <label for="proposal">Research Proposal:</label><br>
+            <textarea
+                id="proposal"
+                name="proposal"
+                minlength="100"
+                maxlength="1000"
+                rows="10"
+                cols="60"
+                placeholder="Enter your research proposal (100–1000 characters)"></textarea>
+        </p>
+
+        <p>
+            <strong>Note:</strong>
+            The Research Proposal cannot be conditionally made required
+            only for "Research Scholarship" using HTML5 alone.
+            JavaScript is required for that conditional validation.
+        </p>
+
+        <button type="button">Back</button>
+        <button type="button">Next</button>
+    </fieldset>
+
+
+    <br>
+
+
+    <fieldset>
+        <legend>8. Documents</legend>
+
+        <p>
+            <label for="documentPhotograph">Photograph:</label><br>
+            <input
+                type="file"
+                id="documentPhotograph"
+                name="documentPhotograph"
+                required
+                accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png">
+        </p>
+
+        <p>
+            <label for="tenthMarksheet">10th Marksheet:</label><br>
+            <input
+                type="file"
+                id="tenthMarksheet"
+                name="tenthMarksheet"
+                required
+                accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png">
+        </p>
+
+        <p>
+            <label for="twelfthMarksheet">12th Marksheet:</label><br>
+            <input
+                type="file"
+                id="twelfthMarksheet"
+                name="twelfthMarksheet"
+                required
+                accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png">
+        </p>
+
+        <p>
+            <label for="idProof">ID Proof:</label><br>
+            <input
+                type="file"
+                id="idProof"
+                name="idProof"
+                required
+                accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png">
+        </p>
+
+        <p>
+            <label for="otherCertificate">
+                Other Certificate (Optional):
+            </label><br>
+            <input
+                type="file"
+                id="otherCertificate"
+                name="otherCertificate"
+                accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png">
+        </p>
+
+        <button type="button">Back</button>
+        <button type="button">Next</button>
+    </fieldset>
+
+
+    <br>
+
+
+    <fieldset>
+        <legend>9. Personal Statement</legend>
+
+        <p>
+            <label for="personalStatement">Personal Statement:</label><br>
+            <textarea
+                id="personalStatement"
+                name="personalStatement"
+                required
+                minlength="100"
+                maxlength="500"
+                rows="8"
+                cols="60"
+                placeholder="Describe your academic goals, interests, achievements and why you want to join this course (100–500 characters)."></textarea>
+        </p>
+
+        <button type="button">Back</button>
+        <button type="button">Next</button>
+    </fieldset>
+
+
+    <br>
+
+    <fieldset>
+        <legend>10. Declaration</legend>
+
+        <p>
+            <input
+                type="checkbox"
+                id="accuracy"
+                name="declarationAccuracy"
+                value="yes"
+                required>
+            <label for="accuracy">
+                I confirm that all information provided by me is true
+                and accurate.
+            </label>
+        </p>
+
+        <p>
+            <input
+                type="checkbox"
+                id="terms"
+                name="declarationTerms"
+                value="yes"
+                required>
+            <label for="terms">
+                I accept the terms and conditions of admission.
+            </label>
+        </p>
+
+        <p>
+            <input
+                type="checkbox"
+                id="verification"
+                name="declarationVerification"
+                value="yes"
+                required>
+            <label for="verification">
+                I authorize the institution to verify the information
+                and documents submitted by me.
+            </label>
+        </p>
+
+        <button type="button">Back</button>
+
+        <button type="submit">Submit</button>
+
+        <button type="reset">Reset</button>
+    </fieldset>
+
+</form>
+
+</body>
+</html>
