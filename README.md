@@ -1,1 +1,1 @@
-gu website
+FORM FOR STUDENT REGISTRATION 
